@@ -1,3 +1,3 @@
 FROM docker.io/php:fpm
-COPY ["build.sh", "install-php-extensions", "/"]
+COPY --chmod=755 ["build.sh", "install-php-extensions", "/"]
 RUN ["/build.sh"]
