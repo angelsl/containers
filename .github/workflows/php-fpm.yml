@@ -1,4 +1,4 @@
-name: Build infra-php
+name: Build php-fpm
 on:
   push:
     branches: ["master"]
