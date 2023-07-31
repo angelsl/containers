@@ -1,0 +1,10 @@
+name: Build infra-php
+on:
+  push:
+    branches: ["master"]
+jobs:
+  build:
+    uses: ./.github/workflows/build-deploy.yml
+    with:
+      image: php-fpm
+    secrets: inherit
