@@ -24,6 +24,6 @@ composer install --no-scripts --no-dev --ignore-platform-reqs
 composer install --no-dev --ignore-platform-reqs
 
 if [ -n "${ARG_ENV_LINK:-}" ]; then
-  rm .env
+  rm -f .env
   ln -s "${ARG_ENV_LINK}" .env
 fi
