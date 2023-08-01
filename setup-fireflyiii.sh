@@ -12,7 +12,7 @@ rm -rf bootstrap/cache/*
 rm -rf vendor/
 
 if [ -d .git ]; then
-  git fetch "${ARG_GIT_REMOTE}" "${ARG_REF}"
+  git fetch --depth 1 "${ARG_GIT_REMOTE}" "${ARG_REF}"
   git reset --hard
   git clean -xfd
   git checkout "${ARG_REF}"
@@ -20,8 +20,8 @@ else
   git clone --depth 1 -b "${ARG_REF}" "${ARG_GIT_REMOTE}" .
 fi
 
-composer install --no-scripts --no-dev
-composer install --no-dev
+composer install --no-scripts --no-dev --ignore-platform-reqs
+composer install --no-dev --ignore-platform-reqs
 
 if [ -n "${ARG_ENV_LINK:-}" ]; then
   rm .env
