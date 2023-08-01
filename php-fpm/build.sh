@@ -2,6 +2,7 @@
 
 set -euo pipefail
 
+apt-get update
 apt-get -y install git
 
 /install-php-extensions bcmath apcu intl gd xdebug zip pgsql pdo_pgsql opcache memcached
