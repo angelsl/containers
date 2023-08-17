@@ -7,8 +7,9 @@ apt-get -y install git locales
 rm -rf /var/lib/apt/lists/*
 
 cat <<EOF > /etc/locale.gen
-en_US.UTF-8
-en_SG.UTF-8
+en_US.UTF-8 UTF-8
+en_SG.UTF-8 UTF-8
+en_GB.UTF-8 UTF-8
 EOF
 locale-gen
 
