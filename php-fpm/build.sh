@@ -3,7 +3,14 @@
 set -euo pipefail
 
 apt-get update
-apt-get -y install git
+apt-get -y install git locales
+rm -rf /var/lib/apt/lists/*
+
+cat <<EOF > /etc/locale.gen
+en_US.UTF-8
+en_SG.UTF-8
+EOF
+locale-gen
 
 /install-php-extensions bcmath apcu intl gd xdebug zip pgsql pdo_pgsql opcache memcached
 
