@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/sh -e
 
 . /sl/ttrss.env
 
@@ -11,3 +11,5 @@ while [ ! -s $DST_DIR/config.php -a -e $DST_DIR/.app_is_ready ]; do
 done
 
 sudo -E -u app /usr/bin/php82 /var/www/html/tt-rss/update_daemon2.php &
+
+wait
