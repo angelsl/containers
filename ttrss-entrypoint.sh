@@ -1,6 +1,4 @@
-#!/bin/bash
-
-set -euo pipefail
+#!/bin/sh
 
 source /sl/ttrss.env
 
