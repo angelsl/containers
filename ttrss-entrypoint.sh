@@ -1,6 +1,6 @@
 #!/bin/sh
 
-source /sl/ttrss.env
+. /sl/ttrss.env
 
 /opt/tt-rss/startup.sh &
 
