@@ -14,8 +14,8 @@ rm -rf vendor/
 if [ -d .git ]; then
   git fetch --depth 1 "${ARG_GIT_REMOTE}" "${ARG_REF}"
   git reset --hard
-  git clean -xfd
-  git checkout "${ARG_REF}"
+  git clean -xfd -e /.env -e /storage/upload
+  git checkout FETCH_HEAD
 else
   git clone --depth 1 -b "${ARG_REF}" "${ARG_GIT_REMOTE}" .
 fi
