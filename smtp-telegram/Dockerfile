@@ -1,5 +1,5 @@
 FROM golang:1.20-alpine3.18 AS builder
-RUN apk add --no-cache git ca-certificates mailcap
+RUN apk add --no-cache git ca-certificates mailcap bash
 WORKDIR /app
 COPY --chmod=755 ["build.sh", "/app"]
 RUN ["/app/build.sh"]
