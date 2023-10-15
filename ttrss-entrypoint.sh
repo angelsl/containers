@@ -10,5 +10,10 @@ while [ ! -s $DST_DIR/config.php -a -e $DST_DIR/.app_is_ready ]; do
 	sleep 3
 done
 
+while ! id app; do
+    echo waiting for app user...
+    sleep 1
+done
+
 sudo -E -u app /usr/bin/php82 /var/www/html/tt-rss/update_daemon2.php &
 wait
