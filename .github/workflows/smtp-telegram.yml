@@ -2,6 +2,10 @@ name: Build smtp-telegram
 on:
   push:
     branches: ["master"]
+    paths:
+      - .github/workflows/build-deploy.yml
+      - .github/workflows/smtp-telegram.yml
+      - smtp-telegram/**
 jobs:
   build:
     permissions:

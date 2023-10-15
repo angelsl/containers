@@ -2,6 +2,10 @@ name: Build php-fpm
 on:
   push:
     branches: ["master"]
+    paths:
+      - .github/workflows/build-deploy.yml
+      - .github/workflows/php-fpm.yml
+      - php-fpm/**
 jobs:
   build:
     permissions:
