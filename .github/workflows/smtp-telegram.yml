@@ -1,0 +1,13 @@
+name: Build smtp-telegram
+on:
+  push:
+    branches: ["master"]
+jobs:
+  build:
+    permissions:
+      contents: read
+      packages: write
+    uses: ./.github/workflows/build-deploy.yml
+    with:
+      image: smtp-telegram
+    secrets: inherit
