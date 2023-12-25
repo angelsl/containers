@@ -15,5 +15,5 @@ while ! id app; do
     sleep 1
 done
 
-sudo -E -u app /usr/bin/php82 /var/www/html/tt-rss/update_daemon2.php &
+sudo -E -u app "$TTRSS_PHP_EXECUTABLE" /var/www/html/tt-rss/update_daemon2.php &
 wait
