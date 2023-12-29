@@ -1,5 +1,6 @@
 name: Build php-fpm
 on:
+  workflow_dispatch:
   push:
     branches: ["master"]
     paths:
