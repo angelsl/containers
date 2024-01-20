@@ -1,0 +1,51 @@
+FROM docker.io/busybox:musl
+RUN mkdir /nonsense
+RUN dd if=/dev/urandom bs=1 count=1 of=/nonsense/1
+RUN dd if=/dev/urandom bs=1 count=1 of=/nonsense/2
+RUN dd if=/dev/urandom bs=1 count=1 of=/nonsense/3
+RUN dd if=/dev/urandom bs=1 count=1 of=/nonsense/4
+RUN dd if=/dev/urandom bs=1 count=1 of=/nonsense/5
+RUN dd if=/dev/urandom bs=1 count=1 of=/nonsense/6
+RUN dd if=/dev/urandom bs=1 count=1 of=/nonsense/7
+RUN dd if=/dev/urandom bs=1 count=1 of=/nonsense/8
+RUN dd if=/dev/urandom bs=1 count=1 of=/nonsense/9
+RUN dd if=/dev/urandom bs=1 count=1 of=/nonsense/10
+RUN dd if=/dev/urandom bs=1 count=1 of=/nonsense/11
+RUN dd if=/dev/urandom bs=1 count=1 of=/nonsense/12
+RUN dd if=/dev/urandom bs=1 count=1 of=/nonsense/13
+RUN dd if=/dev/urandom bs=1 count=1 of=/nonsense/14
+RUN dd if=/dev/urandom bs=1 count=1 of=/nonsense/15
+RUN dd if=/dev/urandom bs=1 count=1 of=/nonsense/16
+RUN dd if=/dev/urandom bs=1 count=1 of=/nonsense/17
+RUN dd if=/dev/urandom bs=1 count=1 of=/nonsense/18
+RUN dd if=/dev/urandom bs=1 count=1 of=/nonsense/19
+RUN dd if=/dev/urandom bs=1 count=1 of=/nonsense/20
+RUN dd if=/dev/urandom bs=1 count=1 of=/nonsense/21
+RUN dd if=/dev/urandom bs=1 count=1 of=/nonsense/22
+RUN dd if=/dev/urandom bs=1 count=1 of=/nonsense/23
+RUN dd if=/dev/urandom bs=1 count=1 of=/nonsense/24
+RUN dd if=/dev/urandom bs=1 count=1 of=/nonsense/25
+RUN dd if=/dev/urandom bs=1 count=1 of=/nonsense/26
+RUN dd if=/dev/urandom bs=1 count=1 of=/nonsense/27
+RUN dd if=/dev/urandom bs=1 count=1 of=/nonsense/28
+RUN dd if=/dev/urandom bs=1 count=1 of=/nonsense/29
+RUN dd if=/dev/urandom bs=1 count=1 of=/nonsense/30
+RUN dd if=/dev/urandom bs=1 count=1 of=/nonsense/31
+RUN dd if=/dev/urandom bs=1 count=1 of=/nonsense/32
+RUN dd if=/dev/urandom bs=1 count=1 of=/nonsense/33
+RUN dd if=/dev/urandom bs=1 count=1 of=/nonsense/34
+RUN dd if=/dev/urandom bs=1 count=1 of=/nonsense/35
+RUN dd if=/dev/urandom bs=1 count=1 of=/nonsense/36
+RUN dd if=/dev/urandom bs=1 count=1 of=/nonsense/37
+RUN dd if=/dev/urandom bs=1 count=1 of=/nonsense/38
+RUN dd if=/dev/urandom bs=1 count=1 of=/nonsense/39
+RUN dd if=/dev/urandom bs=1 count=1 of=/nonsense/40
+RUN dd if=/dev/urandom bs=1 count=1 of=/nonsense/41
+RUN dd if=/dev/urandom bs=1 count=1 of=/nonsense/42
+RUN dd if=/dev/urandom bs=1 count=1 of=/nonsense/43
+RUN dd if=/dev/urandom bs=1 count=1 of=/nonsense/44
+RUN dd if=/dev/urandom bs=1 count=1 of=/nonsense/45
+RUN dd if=/dev/urandom bs=1 count=1 of=/nonsense/46
+RUN dd if=/dev/urandom bs=1 count=1 of=/nonsense/47
+
+CMD ["/bin/echo", "It works!"]
