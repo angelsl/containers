@@ -28,3 +28,8 @@ if [ -n "${ARG_ENV_LINK:-}" ]; then
 fi
 
 composer install --prefer-dist --no-dev --ignore-platform-reqs
+php artisan firefly-iii:upgrade-database
+php artisan firefly-iii:correct-database
+php artisan firefly-iii:report-integrity
+php artisan cache:clear
+php artisan config:cache
