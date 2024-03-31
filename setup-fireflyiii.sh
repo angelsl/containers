@@ -2,7 +2,9 @@
 
 set -euo pipefail
 
-mkdir -p "${ARG_DEST:=/sl/fireflyiii-app}"
+: "${ARG_DEST:=/sl/fireflyiii-app}"
+
+mkdir -p "${ARG_DEST}"
 cd "${ARG_DEST}"
 
 : "${ARG_GIT_REMOTE:=https://github.com/angelsl/firefly-iii.git}"
