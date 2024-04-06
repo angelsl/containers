@@ -21,6 +21,8 @@ else
   git clone --depth 1 -b "${ARG_REF}" "${ARG_GIT_REMOTE}" .
 fi
 
+composer install --no-scripts --prefer-dist --no-dev --ignore-platform-reqs
+
 if [ -n "${ARG_ENV_LINK:-}" ]; then
   rm -f .env
   ln -s "${ARG_ENV_LINK}" .env
