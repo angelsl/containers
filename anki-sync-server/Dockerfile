@@ -4,7 +4,7 @@ RUN set -eux; \
   apt-get update; \
   apt-get install -y protobuf-compiler
 USER nobody
-RUN ["cargo", "install", "--root", "/tmp", "--git", "https://github.com/ankitects/anki.git", "--tag", "23.12.1", "anki-sync-server"]
+RUN ["cargo", "install", "--root", "/tmp", "--git", "https://github.com/ankitects/anki.git", "--tag", "24.04.1", "anki-sync-server"]
 
 FROM debian:bookworm-slim
 COPY --from=builder /tmp/bin/anki-sync-server /anki-sync-server

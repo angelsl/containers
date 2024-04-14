@@ -1,10 +1,10 @@
-FROM golang:1.20-alpine3.18 AS builder
+FROM golang:1-alpine3.19 AS builder
 RUN apk add --no-cache git ca-certificates mailcap bash
 WORKDIR /app
 COPY --chmod=755 ["build.sh", "/app"]
 RUN ["/app/build.sh"]
 
-FROM alpine:3.18
+FROM alpine:3.19
 RUN apk add --no-cache ca-certificates mailcap
 COPY --from=builder /app/smtp_to_telegram /smtp_to_telegram
 USER daemon
