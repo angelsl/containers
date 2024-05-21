@@ -31,8 +31,8 @@ fi
 php artisan migrate --seed
 php artisan firefly-iii:decrypt-all
 php artisan cache:clear
+php artisan view:clear
 php artisan firefly-iii:upgrade-database
-php artisan firefly-iii:correct-database
 php artisan firefly-iii:report-integrity
 php artisan cache:clear
 php artisan config:cache
