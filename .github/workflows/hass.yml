@@ -33,4 +33,4 @@ jobs:
           context: .
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
-          build-args: BUILD_FROM=ghcr.io/home-assistant/amd64-homeassistant-base:2024.06.01
+          build-args: BUILD_FROM=ghcr.io/home-assistant/amd64-homeassistant-base:2024.06.1
