@@ -15,4 +15,5 @@ locale-gen
 
 /install-php-extensions bcmath apcu intl gd xdebug zip pgsql pdo_pgsql opcache memcached
 
+rm /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
 rm /install-php-extensions /build.sh
