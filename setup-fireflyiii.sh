@@ -29,7 +29,6 @@ if [ -n "${ARG_ENV_LINK:-}" ]; then
 fi
 
 php artisan migrate --seed
-php artisan firefly-iii:decrypt-all
 php artisan cache:clear
 php artisan view:clear
 php artisan firefly-iii:upgrade-database
