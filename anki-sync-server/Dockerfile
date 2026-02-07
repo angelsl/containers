@@ -1,12 +1,12 @@
-FROM rust:1-bookworm AS builder
+FROM rust:1-trixie AS builder
 USER root
 RUN set -eux; \
   apt-get update; \
   apt-get install -y protobuf-compiler
 USER nobody
-RUN ["cargo", "install", "--root", "/tmp", "--git", "https://github.com/ankitects/anki.git", "--tag", "24.06.2", "anki-sync-server"]
+RUN ["cargo", "install", "--root", "/tmp", "--git", "https://github.com/ankitects/anki.git", "--tag", "25.09.2", "anki-sync-server"]
 
-FROM debian:bookworm-slim
+FROM debian:trixie-slim
 COPY --from=builder /tmp/bin/anki-sync-server /anki-sync-server
 RUN set -eux; \
 	groupadd -r anki-sync-server --gid=999; \
